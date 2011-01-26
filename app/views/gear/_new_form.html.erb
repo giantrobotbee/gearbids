@@ -4,6 +4,14 @@
       <%= form.input :type, :as         => :select,
                             :collection => ["Guitar", "Bass", "Synth/Keyboard", "Other"],
                             :label      => "What type of gear are you selling?" %>
-      <% end %>
+      <%= form.input :make %>
+      <%= form.input :model %>
+      <%= form.input :year %>
+      <%= form.input :description %>
     <% end %>
-  </div>
+
+    <%= form.buttons do %>
+      <%= form.commit_button "Sell My Gear" %>
+    <% end %>
+  <% end %>
+</div>

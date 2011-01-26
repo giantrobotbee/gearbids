@@ -1,0 +1,3 @@
+$("#main").append("<%= escape_javascript(link_to "Post Your Gear", new_gear_path, :remote => true, :id => "post_your_gear") %>")
+$("div#new_gear_form").remove();
+$("#gear_list").append("<%= escape_javascript(render :partial => 'gear', :locals => {:gear => @gear}) %>");
